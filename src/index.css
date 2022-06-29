@@ -1,13 +1,352 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ffbb00;
+  margin: 3px 3px 0 3px;
+  padding: 20px 25px;
+  border-bottom: 3px white solid;
+  border-radius: 20px;
+}
+
+.page-title {
+  font-size: 52px;
+  color: black;
+  font-weight: bold;
+  margin: 0;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: red;
+  font-style: italic;
+}
+
+header nav {
+  margin: 10px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+header nav ul li a:hover {
+  color: red;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/* Hero Styles */
+.hero {
+  background-image: linear-gradient(white, #f2f2f2);
+  border: solid 3px black;
+  border-radius: 20px;
+  margin: 0 3px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+  font-size: 26px;
+  font-style: italic;
+}
+
+/* About Me Styles */
+.bio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 20px;
+  margin: 3px;
+  background-image: linear-gradient(#f2f2f2, #cccccc);
+}
+
+.bioleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin-right: 20px;
+  padding: 0 10px 30px 0;
+  border-right: solid 3px black;
+}
+
+.bioleft img {
+  border-radius: 25px;
+}
+
+.bioleft h3 {
+  font-size: 32px;
+}
+
+.bioright {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  font-size: 18px;
+}
+
+.bioright p {
+  padding: 10px;
+}
+
+/* Projects Styles */
+.work {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 20px;
+  margin: 3px;
+  background-image: linear-gradient(#cccccc, #a6a6a6, #cccccc, #a6a6a6, #cccccc);
+  height: 600px;
+}
+
+.work h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 32px;
+  padding-right: 20px;
+  height: 95%;
+  width: 15%;
+  border-right: solid 3px black;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space space-around;
+  margin: 10px;
+  width: 90%;
+  height: 95%;
+}
+
+.projects a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.project1 {
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 25px;
+  margin: 3px;
+  width: 100%;
+  background-image: url(https://i.imgur.com/nk4Ekfg.jpg);
+  background-size: cover;
+  flex: 0 32%;
+}
+
+.projects-middle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space space-around;
+  margin: 3px;
+  width: 100%;
+  flex: 0 32%;
+}
+
+.projects-bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space space-around;
+  margin: 3px;
+  width: 100%;
+  flex: 0 32%;
+}
+
+.project2 {
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 25px;
+  margin: 3px;
+  width: 50%;
+  background-image: url(https://i.imgur.com/EeSbjnb.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.project3 {
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 25px;
+  margin: 3px;
+  width: 50%;
+  background-image: url(https://i.imgur.com/y6Cv0rM.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.project4 {
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 25px;
+  margin: 3px;
+  width: 50%;
+  background-image: url(https://i.imgur.com/fX1j8mb.jpg);
+  background-size: cover;
+}
+
+.project5 {
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 25px;
+  margin: 3px;
+  width: 50%;
+  background-image: url(https://i.imgur.com/r3dqnue.jpg);
+  background-size: cover;
+}
+
+.project1:hover,
+.project2:hover,
+.project3:hover,
+.project4:hover,
+.project5:hover {
+  color: red;
+  font-style: italic;
+}
+
+.project-description {
+  text-align: right;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+/* Contact Styles */
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 20px;
+  margin: 3px;
+  background-image: linear-gradient(#cccccc, #a6a6a6);
+}
+
+.contact h6 {
+  font-size: 32px;
+  padding-right: 20px;
+  border-right: solid 3px black;
+}
+
+address {
+  font-size: 18px;
+}
+
+.links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.links ul li a {
+  padding: 15px;
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.links ul li a:hover {
+  color: red;
+  font-style: italic;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffbb00;
+  padding: 20px 25px;
+  margin: 0 3px 3px 3px;
+  border-top: 3px white solid;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+/* Media Query 1: Small Desktop and Smaller */
+@media screen and (max-width: 980px) {
+  .bioright {
+      flex-direction: column;
+  }
+}
+
+/* Media Query 2: Tablet and Smaller */
+@media screen and (max-width: 768px) {
+  .bioright {
+      flex-direction: column;
+  }
+
+  .work h4 {
+      font-size: 26px;
+      padding-right: 10px;
+  }
+  
+  .contact h6 {
+      font-size: 26px;
+      padding-right: 10px;
+      border-right: solid 3px black;
+  }
+}
+
+/* Media Query 3: Mobile Phone and Smaller */
+@media screen and (max-width: 575px) {
+  .bioright {
+      flex-direction: column;
+  }
+  
+  .work h4 {
+      font-size: 20px;
+      padding-right: 5px;
+  }  
+  
+  .contact h6 {
+      font-size: 20px;
+      padding-right: 5px;
+  }
+
+  address {
+      font-size: 14px;
+  }
+
+  .links ul li a {
+      padding: 10px;
+      font-size: 14px;
+  }
 }
