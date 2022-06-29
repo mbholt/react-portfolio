@@ -7,28 +7,33 @@ import ContactForm from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  const [aboutSelected, setAboutSelected] = useState(true);
+  const [portfolioSelected, setPortfolioSelected] = useState(false);
+  const [resumeSelected, setResumeSelected] = useState(false);
   const [contactSelected, setContactSelected] = useState(false);
 
   return (
     <div>
-        <Header />
+      <Header
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+        portfolioSelected={portfolioSelected}
+        setPortfolioSelected={setPortfolioSelected}
+        resumeSelected={resumeSelected}
+        setResumeSelected={setResumeSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      ></Header>
       
       <main>
-      {/* {!contactSelected ? (
-        <>
-          <
-      )} */}
-        <About />
-
-        <Portfolio />
-
-        <Resume />
-
-        <ContactForm />
-
+        {aboutSelected && <About />}
+        {portfolioSelected && <Portfolio />}
+        {resumeSelected && <Resume />}
+        {contactSelected && <ContactForm />}
       </main>
 
-        <Footer />
+      <Footer />
+
     </div>
   );
 }

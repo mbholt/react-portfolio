@@ -19,10 +19,17 @@ header {
   border-radius: 20px;
 }
 
-header h1 {
+.page-title {
   font-size: 52px;
+  color: black;
   font-weight: bold;
   margin: 0;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: red;
+  font-style: italic;
 }
 
 header nav {
@@ -47,6 +54,7 @@ header nav ul li a {
 header nav ul li a:hover {
   color: red;
   font-style: italic;
+  cursor: pointer;
 }
 
 /* Hero Styles */
